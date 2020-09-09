@@ -15,7 +15,6 @@ ul li{list-style: none;}
 img{vertical-align: top;}
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 
-* {box-sizing: border-box;}
 
 
 * {
@@ -27,15 +26,19 @@ body {
   font-family: sans-serif;
 }
 
+/*START HEADER-------------------------------------------------------------------*/
 .header {
   overflow: hidden;
   position: relative;
   height: 100%;
-  background-color: #2e284d;
-  background-image: url('img/backgroundimage.png');
   background-size: cover;
   background-position: center;
+
+}
+
+.background {
   opacity: 0.85;
+  position: absolute;
 }
 
 .header-overlay {
@@ -44,7 +47,6 @@ body {
   top: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(54, 40, 72, 0.7);
 }
 
 .nav-container {
@@ -59,7 +61,7 @@ body {
   padding-right: 50px;
 }
 
-/* Условие для экранов с шириной от 0 до 1200px */
+
 @media (max-width: 768px) {
   .nav-container {
     padding-left: 15px;
@@ -98,7 +100,7 @@ body {
   display: flex;
 }
 
-/* Условие для экранов с шириной от 0 до 1200px */
+
 @media (max-width: 1200px) {
   .nav {
     display: none;
@@ -138,7 +140,6 @@ body {
   cursor: pointer;
 }
 
-/* Условие для экранов с шириной от 0 до 1200px */
 @media (max-width: 1200px) {
   .menu-icon {
     display: flex;
@@ -193,8 +194,6 @@ body {
 }
 
 
-/* ----------------- Мобильная навигация ----------------- */
-
 .mobile-nav {
   z-index: 9;
   display: block;
@@ -206,9 +205,10 @@ body {
   padding: 50px;
   background-color: #2d264a;
   transition: transform 0.4s ease-in;
+  opacity: 0.9;
 }
 
-/* Условие для экранов с шириной от 0 до 1200px */
+
 @media (max-width: 768px) {
   .mobile-nav {
     width: 320px;
@@ -253,11 +253,12 @@ body {
 }
 
 .headerContent {
-  margin-top: 300px;
+  margin-top: 180px;
   position: relative;
   text-align: center;
   display: flex;
   justify-content: center;
+
 }
 
 h1  {
@@ -303,6 +304,11 @@ h1  {
   padding: 10px 10px 10px 10px;
 }
 
+/*END HEADER--------------------------------------------------------------*/
+
+
+
+/*START BLOCK2 OUR STORY----------------------------------------------------*/
 .contentAfterHeader {
   height: 350px;
   display: flex;
@@ -376,27 +382,21 @@ button:active {
     margin-top: 450px;
   }
 }
+/*END BLOCK2 OUR STORY----------------------------------------------------------*/
 
+
+
+/*START BLOCK3 AFTER STORY--------------------------------------------*/
 .afterStory {
   overflow: hidden;
   position: relative;
-  background-color: #2e284d;
-  background-image: url('img/put_your_image_here_269.png');
-  background-size: cover;
-  background-position: center;
-  opacity: 0.85;
   height: 550px;
 }
+/*END BLOCK3 AFTER STORY----------------------------------------*/
 
-.city {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(54, 40, 72, 0.7);
-}
 
+
+/*START BLOCK4 EXPERTISE-----------------------------------------------------------------*/
 .expertiseHeader {
   text-align: center;
   margin: 50px 0 50px 0;
@@ -472,14 +472,14 @@ button:active {
 .expertise img {
   margin-top: 10px;
 }
+/*END BLOCK4 EXPERTISE-------------------------------------------------------*/
 
-.afterExpertise {
+
+
+/*START BLOCK5 OUR TEAM--------------------------------------------------------------*/
+.ourTeam {
+  overflow: hidden;
   position: relative;
-  background-color: #2e284d;
-  background-image: url('img/bgimage2.png');
-  background-size: cover;
-  background-position: center;
-  opacity: 0.85;
   height: 550px;
 
 }
@@ -490,16 +490,16 @@ button:active {
   top: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(54, 40, 72, 0.7);
 
 }
 
-.afterExpertiseContent {
+.aboutTeam {
   text-align: center;
   margin-top: 60px;
 }
 
-.afterExpertiseContent h2 {
+.aboutTeam h2 {
+
   font-family: PlayfairDisplay, serif;
   font-size: 22px;
   line-height: 1.2;
@@ -508,7 +508,7 @@ button:active {
   color: #ffffff;
 }
 
-.afterExpertiseContent p {
+.aboutTeam p {
   font-family: PlayfairDisplay, serif;
   font-size: 14px;
   line-height: 1.2;
@@ -518,28 +518,23 @@ button:active {
 }
 
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  max-width: 230px;
-  height: 310px;
+  width: 220px;
+  height: 100%;
   border: 1px solid white;
   margin-left: 20px;
 }
 
-.card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
+
 
 .container {
-  padding: 2px 16px;
   text-align: center;
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .cards {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
 }
 
 .container h4 {
@@ -559,3 +554,80 @@ button:active {
   font-weight: 300;
   color: #fafafa;
 }
+/*END BLOCK5 OUR TEAM-------------------------------------------------------------------------*/
+
+
+
+
+/*START BLOCK6 OUR WORKS---------------------------------------------------------------*/
+.ourWorks {
+  display: flex;
+  justify-content: space-around;
+  max-height: 100%;
+  margin: 75px 0 75px 0;
+}
+
+.ourWorks h2 {
+  font-family: PlayfairDisplay, serif;
+  font-size: 22px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #413d4b;
+  text-transform: uppercase;
+}
+
+.ourWorks p {
+  font-family: Roboto, serif;
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  color: #413d4b;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  overflow: hidden;
+
+
+}
+
+.column {
+  max-width: 200px
+}
+
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+.loadMore {
+  display: flex;
+  justify-content: center;
+  padding: 25px 0 25px 0;
+}
+.loadMore button {
+
+  font-family: HammersmithOne, sans-serif;
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 500;
+  color: #00e0d0;
+  border: 1px solid #00e0d0;
+  background: none;
+  text-transform: uppercase;
+  margin-top: 45px;
+  padding: 10px 10px 10px 10px;
+}
+
